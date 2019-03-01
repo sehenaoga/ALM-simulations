@@ -1,0 +1,48 @@
+SciDAVis 1.22.0 template file
+<multiLayer>	1	1
+geometry	32	-13	654	490	active
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	1214	544
+Alignement	0	0
+<graph>
+ggeometry	5	5	642	433
+PlotTitle	<b>Mesh independence</b> - r/R = 0.82 - U<sub>in</sub> = 10 m/s	#000000	4
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	1	#a0a0a4	2	1	#0000ff	0	1	#a0a0a4	2	1	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	<b>x/D</b>	<b>Axial induction factor</b> (U/U<sub>ref</sub>)			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Helvetica	20	75	0	0	0
+ScaleFont0	Helvetica	20	75	0	0	0
+ScaleFont1	Helvetica	20	75	0	0	0
+ScaleFont2	Helvetica	20	75	0	0	0
+ScaleFont3	Helvetica	20	75	0	0	0
+AxisFont0	Helvetica	16	75	0	0	0
+AxisFont1	Helvetica	16	75	0	0	0
+AxisFont2	Helvetica	16	75	0	0	0
+AxisFont3	Helvetica	16	75	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#3c3c3c	#000000	#3c3c3c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+scale	0	0	1.1	0.2	7	5	0	0
+scale	1	0	1.1	0.2	8	5	0	0
+scale	2	-1	1.3	0.5	8	5	0	0
+scale	3	-1	1.3	0.5	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.326161790017212	1.07849162011173	Helvetica	14	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Experimental measurements	\c{2}Mesh refinement 1	\c{4}Mesh refinement 2	\c{5}Mesh refinement 3</legend>
+</graph>
+</multiLayer>

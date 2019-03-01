@@ -1,0 +1,80 @@
+SciDAVis 1.22.0 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+1939
+<table creation_time="1918-29-04 22:52:00:000" caption_spec="%n%C{ - }%c" name="MEXICO-Cp" columns="2" rows="3033"><comment><![CDATA[]]></comment><column creation_time="2018-29-04 22:52:29:788" caption_spec="%n%C{ - }%c" name="U" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-29-04 22:52:29:788" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-29-04 22:52:29:788" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">2.4000000000000000e+01</row></column><column creation_time="2018-29-04 22:52:29:789" caption_spec="%n%C{ - }%c" name="Cp_avg" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-29-04 22:52:29:789" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-29-04 22:52:29:789" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">3.1682179999999999e-01</row><row type="TypeDouble" index="1" invalid="no">3.2537350399999998e-01</row><row type="TypeDouble" index="2" invalid="no">2.1088136299999999e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	673	46	586	410	hidden
+
+</table>
+<table>
+1934
+<table creation_time="1918-30-04 00:16:00:000" caption_spec="%n%C{ - }%c" name="DTB-Cp" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2018-30-04 00:16:26:222" caption_spec="%n%C{ - }%c" name="U" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-30-04 00:16:26:222" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-30-04 00:16:26:222" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">2.4000000000000000e+01</row></column><column creation_time="2018-30-04 00:16:26:222" caption_spec="%n%C{ - }%c" name="Cp_avg" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-30-04 00:16:26:222" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-30-04 00:16:26:222" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.5652596300000002e-01</row><row type="TypeDouble" index="1" invalid="no">2.2661228400000000e-01</row><row type="TypeDouble" index="2" invalid="no">1.3763904099999999e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	652	332	586	410	hidden
+
+</table>
+<table>
+1932
+<table creation_time="2018-30-04 00:33:07:694" caption_spec="%n%C{ - }%c" name="MEXICO-Ct" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2018-30-04 00:33:07:694" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-30-04 00:33:07:694" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-30-04 00:33:07:694" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">2.4000000000000000e+01</row></column><column creation_time="2018-30-04 00:33:07:694" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-30-04 00:33:07:694" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-30-04 00:33:07:695" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">3.1682179999999997e-02</row><row type="TypeDouble" index="1" invalid="no">4.8563209000000003e-02</row><row type="TypeDouble" index="2" invalid="no">5.0209848000000001e-02</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	461	307	586	410	hidden
+
+</table>
+<table>
+1934
+<table creation_time="2018-30-04 00:35:55:178" caption_spec="%n%C{ - }%c" name="DTB-Ct" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2018-30-04 00:35:55:228" caption_spec="%n%C{ - }%c" name="U" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-30-04 00:35:55:228" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-30-04 00:35:55:228" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">2.4000000000000000e+01</row></column><column creation_time="2018-30-04 00:35:55:229" caption_spec="%n%C{ - }%c" name="Cp_avg" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-30-04 00:35:55:229" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-30-04 00:35:55:229" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.5652596300000002e-01</row><row type="TypeDouble" index="1" invalid="no">2.2661228400000000e-01</row><row type="TypeDouble" index="2" invalid="no">1.3763904099999999e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	0	332	586	410	hidden
+
+</table>
+<multiLayer>
+Graph1	1	1	27/04/18 11:07
+geometry	0	0	653	490	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	1214	544
+Alignement	0	0
+<graph>
+ggeometry	5	3	641	433
+PlotTitle	<b>Power coefficient</b>	#000000	4
+<Antialiasing>0</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	1	#a0a0a4	2	1	#0000ff	0	1	#a0a0a4	2	1	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	<b>U<sub>in</sub> [m/s]</b>	C<sub>p</sub>			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Helvetica	23	75	0	0	0
+ScaleFont0	Helvetica	23	75	0	0	0
+ScaleFont1	Helvetica	23	75	0	0	0
+ScaleFont2	Helvetica	23	75	0	0	0
+ScaleFont3	Helvetica	23	75	0	0	0
+AxisFont0	Helvetica	19	75	0	0	0
+AxisFont1	Helvetica	19	75	0	0	0
+AxisFont2	Helvetica	19	75	0	0	0
+AxisFont3	Helvetica	19	75	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#3c3c3c
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	MEXICO-Cp_U	MEXICO-Cp_Cp	7	5	0	1	2	9	1	0	0	0	0	14	2	0	0	3032	1
+curve	DTB-Cp_U	DTB-Cp_Cp	7	5	0	1	2	9	4	0	0	0	0	14	2	0	0	29	1
+scale	0	0.1	0.351	0.05	6	5	0	0
+scale	1	0.1	0.351	0.05	8	5	0	0
+scale	2	9	25	5	6	5	0	0
+scale	3	9	25	5	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	9.77972709551657	0.170456140350877	Helvetica	16	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}MEXICO wind turbine	\c{2}Modified wind turbine</legend>
+</graph>
+</multiLayer>
+<log>
+</log>
