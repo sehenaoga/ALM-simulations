@@ -19,8 +19,7 @@ application     uRANSABLWFarmSolver;
 
 //Time Control
 
-startFrom       latestTime;
-//startFrom     startTime;
+startFrom       startTime;//latestTime;
 
 startTime       0;
 
