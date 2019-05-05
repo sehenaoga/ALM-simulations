@@ -24,7 +24,7 @@ globalProperties
 turbine0
 {
     turbineType         "Tower";
-    baseLocation        (15 11.25 0);
+    baseLocation        (18 11.25 0);
     numBladePoints      50;
     pointDistType       "uniform";
     pointInterpType     "linear";
@@ -44,7 +44,7 @@ turbine0
 turbine1
 {
     turbineType         "Rotor_MEXICO";
-    baseLocation        (12 11.25 0);
+    baseLocation        (15 11.25 0);
     numBladePoints      50;
     pointDistType       "uniform";
     pointInterpType     "linear";
