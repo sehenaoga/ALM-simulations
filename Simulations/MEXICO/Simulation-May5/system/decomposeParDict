@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  2.0.x                                 |
+|  \\    /   O peration     | Version:  2.1.1                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -10,15 +10,33 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    object      airfoilProperties;
+    object      decomposeParDict;
 }
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-airfoilData
-(
-//   alpha   	C_l   	C_d
-(	-180.00		0.000   0.6000	)
-(	0.00    	0.000   0.6000	)
-(	180.00	    0.000   0.6000	)
+numberOfSubdomains 4;
 
-);
+method          hierarchical;
+
+hierarchicalCoeffs
+{
+    n           (2 2 1);
+    delta       0.001;
+    order       xyz;
+}
+scotchCoeffs
+{
+    //processorWeights
+    //(
+    //    1
+    //    1
+    //    1
+    //    1
+    //);
+    //writeGraph  true;
+    //strategy "b";
+}
+
+
+// ************************************************************************* //

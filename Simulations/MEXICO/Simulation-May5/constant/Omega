@@ -9,16 +9,15 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      airfoilProperties;
+    class       uniformDimensionedVectorField;
+    location    "constant";
+    object      Omega;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-airfoilData
-(
-//   alpha   	C_l   	C_d
-(	-180.00		0.000   0.6000	)
-(	0.00    	0.000   0.6000	)
-(	180.00	    0.000   0.6000	)
+// Coriolis rotation rate vector (set for 45 degrees N latitude).
+dimensions      [0 0 -1 0 0 0 0];
+//value           (0.0 0.5142226E-4 0.5142226E-4);
+value           (0.0 0.0 0.0);
 
-);
+// ************************************************************************* //

@@ -9,16 +9,15 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      airfoilProperties;
+    class       uniformDimensionedVectorField;
+    location    "constant";
+    object      g;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-airfoilData
-(
-//   alpha   	C_l   	C_d
-(	-180.00		0.000   0.6000	)
-(	0.00    	0.000   0.6000	)
-(	180.00	    0.000   0.6000	)
+// gravitation acceleration
+dimensions      [0 1 -2 0 0 0 0];
+//value           ( 0.0 0.0 -9.81 );
+value           ( 0.0 0.0 0.0 );
 
-);
+// ************************************************************************* //
