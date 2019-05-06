@@ -23,7 +23,7 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 // Is the turbine array active?
-turbineArrayOn            true;
+turbineArrayOn            false;
 
 // Do we solve the temperature equation? (neutrl = off)
 temperatureEquationOn            false;
