@@ -1,0 +1,72 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-dcea1e13ff76
+Exec   : blockMesh
+Date   : May 06 2019
+Time   : 08:07:21
+Host   : "sebastian-VirtualBox"
+PID    : 2357
+Case   : /media/Simulaciones2/Simulations/MEXICO/Simulations-May6
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "/media/Simulaciones2/Simulations/MEXICO/Simulations-May6/constant/polyMesh/blockMeshDict"
+Creating curved edges
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.810685 .. 0.603429
+        j : 0.45 .. 0.45
+        k : 0.0172363 .. 0.45
+
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 0) (45 22.5 22.5)
+  nPoints: 1540351
+  nCells: 1500000
+  nFaces: 4540000
+  nInternalFaces: 4460000
+----------------
+Patches
+----------------
+  patch 0 (start: 4460000 size: 10000) name: outlet
+  patch 1 (start: 4470000 size: 30000) name: sides
+  patch 2 (start: 4500000 size: 10000) name: inlet
+  patch 3 (start: 4510000 size: 15000) name: ground
+  patch 4 (start: 4525000 size: 15000) name: top
+
+End
+
