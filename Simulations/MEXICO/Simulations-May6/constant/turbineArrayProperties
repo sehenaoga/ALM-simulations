@@ -41,23 +41,23 @@ turbine0
 }
 
 
-turbine1
-{
-    turbineType         "Rotor_MEXICO";
-    baseLocation        (15 11.25 0);
-    numBladePoints      50;
-    pointDistType       "uniform";
-    pointInterpType     "linear";
-    bladeUpdateType     "oldPosition";
-    epsilon             0.2;
-    tipRootLossCorrType "none";
-    rotationDir         "cw";
-    Azimuth             180;//90; //232.0105; //degrees
-    RotSpeed            425.5; //rpm
-    Pitch               -2.3; //degress
-    NacYaw              270.0; //degress ????
-    fluidDensity        1.225; //kg/m^3
-    TorqueGen           0.0;
-}
+// turbine1
+// {
+//     turbineType         "Rotor_MEXICO";
+//     baseLocation        (15 11.25 0);
+//     numBladePoints      50;
+//     pointDistType       "uniform";
+//     pointInterpType     "linear";
+//     bladeUpdateType     "oldPosition";
+//     epsilon             0.2;
+//     tipRootLossCorrType "none";
+//     rotationDir         "cw";
+//     Azimuth             180;//90; //232.0105; //degrees
+//     RotSpeed            425.5; //rpm
+//     Pitch               -2.3; //degress
+//     NacYaw              270.0; //degress ????
+//     fluidDensity        1.225; //kg/m^3
+//     TorqueGen           0.0;
+// }
 
 
