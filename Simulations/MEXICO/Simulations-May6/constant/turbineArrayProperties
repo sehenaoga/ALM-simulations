@@ -24,7 +24,7 @@ globalProperties
 turbine0
 {
     turbineType         "Tower";
-    baseLocation        (18 11.25 0);
+    baseLocation        (18 6 0);
     numBladePoints      50;
     pointDistType       "uniform";
     pointInterpType     "linear";
@@ -43,18 +43,18 @@ turbine0
 
 turbine1
 {
-    turbineType         "Rotor_MEXICO";
-    baseLocation        (15 11.25 0);
+    turbineType         "Tower";
+    baseLocation        (18 6 0);
     numBladePoints      50;
     pointDistType       "uniform";
     pointInterpType     "linear";
     bladeUpdateType     "oldPosition";
-    epsilon             0.2;
+    epsilon             0.05;
     tipRootLossCorrType "none";
     rotationDir         "cw";
     Azimuth             180;//90; //232.0105; //degrees
-    RotSpeed            425.5; //rpm
-    Pitch               -2.3; //degress
+    RotSpeed            0; //rpm
+    Pitch               0; //degress
     NacYaw              270.0; //degress ????
     fluidDensity        1.225; //kg/m^3
     TorqueGen           0.0;
