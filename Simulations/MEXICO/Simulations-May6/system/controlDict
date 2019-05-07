@@ -27,13 +27,13 @@ stopAt          endTime;
 
 endTime         1;
 
-deltaT          7e-4
+deltaT          0.5
 
 //Data writing
 
 writeControl    timeStep; //adjustableRunTime;
 
-writeInterval   285;
+writeInterval   1;
 
 purgeWrite      0;
 
