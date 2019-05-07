@@ -24,7 +24,7 @@ globalProperties
 turbine0
 {
     turbineType         "Tower";
-    baseLocation        (18 6 0);
+    baseLocation        (12 11.25 0); //Base location is modified to account for the downwind configuration
     numBladePoints      50;
     pointDistType       "uniform";
     pointInterpType     "linear";
@@ -43,18 +43,18 @@ turbine0
 
 turbine1
 {
-    turbineType         "Tower";
-    baseLocation        (18 6 0);
+    turbineType         "Rotor_Downwind_Two-bladed";
+    baseLocation        (15 11.25 0); //Base location is modified to account for the downwind configuration
     numBladePoints      50;
     pointDistType       "uniform";
     pointInterpType     "linear";
     bladeUpdateType     "oldPosition";
-    epsilon             0.05;
+    epsilon             0.1;
     tipRootLossCorrType "none";
     rotationDir         "cw";
     Azimuth             180;//90; //232.0105; //degrees
-    RotSpeed            0; //rpm
-    Pitch               0; //degress
+    RotSpeed            425.5; //rpm
+    Pitch               -2.3; //degress
     NacYaw              270.0; //degress ????
     fluidDensity        1.225; //kg/m^3
     TorqueGen           0.0;
