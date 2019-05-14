@@ -1,0 +1,120 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      turbineProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//Geometric characteristics
+NumBl                   1;          //*Number of blades
+TipRad                  5;       //*Tip radius: Refers to the tower height when simulating the tower
+HubRad                  0;       //*Hub radius
+TowerHt                 0.001;          //*Tower height 
+UndSling                0;        //Distance from the  edge of the shaft to the apex of cone of rotation
+OverHang                -0.001;     	//Over hang: Distance from hub center of mass to yaw axis parallel to shaft axis
+Twr2Shft                0;          //Distance fron tower to shaft
+ShftTilt                0;          //Shaft tilt (Angle of tilt of the shaft)
+PreCone                 (0 0);      //Precone (Angle of tilt of the blades from the shaft normal)
+
+//Inertial properties
+GenIner                 0;          //Moment of inertia of the high speed portion of the drive train
+HubIner                 0;          //Moment of inertia of the hub
+BladeIner               0;          //Moment of inertia of the blades 
+
+//Controllers and limiters
+TorqueControllerType    "none";
+YawControllerType       "none";
+PitchControllerType     "none";
+GenTorqueControllerType "none";
+NacYawControllerType    "none";
+BladePitchControllerType "none";
+RotSpeedLimiter         false;
+GenTorqueLimiter        false;
+GenTorqueRateLimiter    false;
+NacYawRateLimiter       false;
+BladePitchRateLimiter   false;
+
+//Not found
+RatedRotSpeed           5.0;
+SpeedFilterCornerFrequency  1.0;
+
+//Drivetrain
+GBRatio                 1;          //Total gear box ratio . 1 for direct drive turbines 
+GBEfficiency		    1.0;        //Gear box efficiency
+GenEfficiency		    1.0;        //Generator efficiency
+
+
+GenTorqueControllerParams
+{
+    CutInGenSpeed           670.0;
+    RatedGenSpeed          1173.7;
+    Region2StartGenSpeed    871.0;
+    Region2EndGenSpeed     1161.963;
+    CutInGenTorque            0.0;
+    RatedGenTorque           43.09355E3;
+    RateLimitGenTorque       15.0E3;
+    KGen                      2.55764E-2;
+    TorqueControllerRelax     1.0;
+}
+
+
+BladePitchControllerParams
+{
+    PitchControlStartPitch    0.0;
+    PitchControlEndPitch      7.6;
+    PitchControlStartSpeed    15.77;
+    PitchControlEndSpeed      16.0;
+    RateLimitBladePitch       4.5;
+}
+
+
+NacYawControllerParams
+{
+    RateLimitNacYaw           2.0;
+}
+
+Airfoils
+(
+    "Cylinder1" 
+);
+
+
+BladeData
+(
+//  radius(m)     c(m)    twist(deg)  airfoil 
+(   0       	  0.05    0	          0       )
+(   0.2           0.05    0           0       )
+(   0.4           0.05    0           0       )
+(   0.6           0.05    0           0       )
+(   0.8           0.05    0           0       )
+(   1             0.05    0           0       )
+(   1.2           0.05    0           0       )
+(   1.4           0.05    0           0       )
+(   1.6           0.05    0           0       )
+(   1.8           0.05    0           0       )
+(   2             0.05    0           0       )
+(   2.2           0.05    0           0       )
+(   2.4           0.05    0           0       )
+(   2.6           0.05    0           0       )
+(   2.8           0.05    0           0       )
+(   3             0.05    0           0       )
+(   3.2           0.05    0           0       )
+(   3.4           0.05    0           0       )
+(   3.6           0.05    0           0       )
+(   3.8           0.05    0           0       )
+(   4             0.05    0           0       )
+(   4.2           0.05    0           0       )
+(   4.4           0.05    0           0       )
+(   4.6           0.05    0           0       )
+(   4.8           0.05    0           0       )
+(   5             0.05    0           0       )
+);
