@@ -18,7 +18,7 @@ FoamFile
 NumBl                   1;          //*Number of blades
 TipRad                  5;       //*Tip radius: Refers to the tower height when simulating the tower
 HubRad                  0;       //*Hub radius
-TowerHt                 0.001;          //*Tower height 
+TowerHt                 5;          //*Tower height 
 UndSling                0;        //Distance from the  edge of the shaft to the apex of cone of rotation
 OverHang                -0.001;     	//Over hang: Distance from hub center of mass to yaw axis parallel to shaft axis
 Twr2Shft                0;          //Distance fron tower to shaft
@@ -91,7 +91,16 @@ Airfoils
 BladeData
 (
 //  radius(m)   c(m)    twist(deg)  airfoil 
-(   0       	0.05   	0	        0       )
-(   2.25       	0.05   	0	        0       )
+(   0        	0.5   	0	        0       )
+(   0.5         0.5     0               0       )
+(   1           0.5     0               0       )
+(   1.5         0.5     0               0       )
+(   2           0.5     0               0       )
+(   2.5         0.5     0               0       )
+(   3           0.5     0               0       )
+(   3.5         0.5     0               0       )
+(   4           0.5     0               0       )
+(   4.5         0.5     0               0       )
+(   5       	0.5   	0	        0       )
 
 );
