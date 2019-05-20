@@ -2,3 +2,4 @@ Results/
 *.pem
 .DS_Store
 *.jpg
+*.OpenFOAM
