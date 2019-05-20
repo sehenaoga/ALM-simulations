@@ -1,0 +1,93 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      turbineProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+NumBl                   1;
+TipRad                 11.2;//.0;
+HubRad                  0.5;
+UndSling                0.0;
+OverHang               -0.1;
+TowerHt                11.2;
+Twr2Shft                0;
+ShftTilt                0;
+PreCone                (0 );
+GBRatio                1.0;
+GenIner               534.116;
+HubIner               115.926E3;
+BladeIner             11.776047E6;
+TorqueControllerType   "none";
+YawControllerType      "none";
+PitchControllerType    "none";
+
+
+TorqueControllerParams
+{
+    CutInGenSpeed           670.0;
+    RatedGenSpeed          1173.7;
+    Region2StartGenSpeed    871.0;
+    Region2EndGenSpeed     1161.963;
+    CutInGenTorque            0.0;
+    RatedGenTorque           43.09355E3;
+    RateLimitGenTorque       15.0E3;
+    KGen                      2.55764E-2;
+    TorqueControllerRelax     1.0;
+}
+
+
+PitchControllerParams
+{
+    PitchControlStartPitch    0.0;
+    PitchControlEndPitch      7.6;
+    PitchControlStartSpeed    15.77;
+    PitchControlEndSpeed      16.0;
+    RateLimitPitch             4.5;
+}
+
+
+
+Airfoils
+(
+    "Cylinder1" 
+    "Cylinder2" 
+    "DU40_A17"  
+    "DU35_A17"  
+    "DU30_A17"  
+    "DU25_A17"  
+    "DU21_A17"  
+    "NACA64_A17"
+);
+
+
+BladeData
+(
+//  radius(m)   c(m)     twist(deg) airfoil 
+    (2.8667     0.4    3     0)
+    (5.6        0.4    3.308     0)
+    (8.3333     0.4    3.308     0)
+    (11.75      0.4    3.308     0)
+    (15.85      0.4    3.48      0)
+/*    (19.95      4.458    10.162     0)
+    (24.05      4.249    9.011      0)
+    (28.15      4.007    7.795      0)
+    (32.25      3.748    6.544      0)
+    (36.35      3.502    5.361      0)
+    (40.45      3.256    4.188      0)
+    (44.55      3.01     3.125      0)
+    (48.65      2.764    2.319      0)
+    (52.75      2.518    1.526      0)
+    (56.1667    2.313    0.863      0)
+    (58.9       2.086    0.37       0)
+    (61.6333    1.419    0.106      0)*/
+);
