@@ -1,0 +1,17 @@
+**MEXICO wind turbines simulations**
+
+V1: Includes the definitio of the rotor. Laminar flow. Default mesh
+V2: Run 1: Modified Mesh - Refinement step 1
+V3: Run 2: Turbulence model is enabled and. Inlet velocity is modified to 10 m/s and boundary conditions for turbulence modelling are included. The dictionaries system/fvSolution and /system/fvSolution_RANS are modified to include "omega" definition.
+V4: The epsilon parameter is set as the chord at r/R = 0.95 as suggested by Matiz. The tower clearance is corrected in the OverHang parameter. Timestep is modified to 7e-4 and the end time of the simulation is set to 2.1 s for a total number of 3000 timesteps
+V5: Run 3: The tower is included 
+V6: Run 4: Mesh refinement step 1, Tower + Rotor, Turbulence, Time step and epsilon correctly set. V_in = 10 m/s. The lenght of the first grading in x direction is modified in order to acount for the tower clearance
+V7: Run 5: Mesh refinement step 2
+V8: Run 6: Mesh refinement step 3
+V9: Run 7: Mesh refinement step 4
+V10: Run 8: Mesh refinement step 2. V_in = 15 m/s
+V11: Run 9: Mesh refinement step 2. V_in = 24 m/s
+V12: Tower only fully turbulent simulation
+V13: Tower only modified. Azimuth 90º, 2 blades. Aimed to check usability
+V14: Modfied mesh to address wake disipation - Mesh refinement step 1
+V15: Modfied mesh to address wake disipation - Mesh refinement step 2
