@@ -1,0 +1,7 @@
+#Turbine    Time(s)    dt(s)    blade pitch angle (degrees)
+0 0 0.0007 0
+1 0 0.0007 -2.3
+
+0 0.0007 0.0007 0
+1 0.0007 0.0007 -2.3
+

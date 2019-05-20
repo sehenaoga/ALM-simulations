@@ -1,0 +1,7 @@
+#Turbine    Time(s)    dt(s)    rotor rotation rate(rpm)
+0 0 0.0007 0
+1 0 0.0007 425.5
+
+0 0.0007 0.0007 0
+1 0.0007 0.0007 425.5
+
