@@ -1,0 +1,19 @@
+*** Changelog ***
+
+** Time averaging analysis **
+1-V1: t:0-10s V:10m/s eps:0.2 cells:1.5M
+7-V2: t:5-10s V:10m/s eps:0.2 cells:1.5M - Pending to add 5s folder
+8-V3: t:10-15s V:10m/s eps:0.2 cells:1.5M - Pending to add 10s folder
+
+** Velocity analysis **
+5-V4: t:0-10s V:15m/s eps:0.2 cells:1.5M
+6-V5: t:0-10s V:20m/s eps:0.2 cells:1.5M
+
+** Mesh independence **
+2-V6: t:0-10s V:15m/s eps:0.2 cells:0.25M
+3-V7: t:0-10s V:15m/s eps:0.2 cells:0.75M
+4-V8: t:0-10s V:15m/s eps:0.2 cells:3M
+
+
+
+
