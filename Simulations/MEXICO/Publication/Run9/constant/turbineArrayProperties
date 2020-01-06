@@ -45,11 +45,11 @@ turbine1
 {
     turbineType         "Rotor_MEXICO";
     baseLocation        (15 11.25 0);
-    numBladePoints      50;
+    numBladePoints      100;
     pointDistType       "uniform";
     pointInterpType     "linear";
     bladeUpdateType     "oldPosition";
-    epsilon             0.3;
+    epsilon             0.1;
     tipRootLossCorrType "none";
     rotationDir         "cw";
     Azimuth             180;//90; //232.0105; //degrees
