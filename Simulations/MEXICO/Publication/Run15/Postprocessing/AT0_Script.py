@@ -344,11 +344,11 @@ slice1.SliceType.Normal = [1.0, 0.0, 0.0]
 slice1.SliceType.Offset = 0.0
 
 # Properties modified on slice1.SliceType
-slice1.SliceType.Origin = [22.5, 11.25, 6.845]
+slice1.SliceType.Origin = [22.5, 11.25, 3.155]
 slice1.SliceType.Normal = [0.0, 0.0, 1.0]
 
 # Properties modified on slice1.SliceType
-slice1.SliceType.Origin = [22.5, 11.25, 6.845]
+slice1.SliceType.Origin = [22.5, 11.25, 3.155]
 slice1.SliceType.Normal = [0.0, 0.0, 1.0]
 
 # show data in view
@@ -664,13 +664,13 @@ plotOverLine1.ComputeTolerance = 1
 plotOverLine1.Tolerance = 2.220446049250313e-16
 
 # init the 'High Resolution Line Source' selected for 'Source'
-plotOverLine1.Source.Point1 = [0.0, 0.0, 6.84499979019165]
-plotOverLine1.Source.Point2 = [45.0, 22.5, 6.84499979019165]
+plotOverLine1.Source.Point1 = [0.0, 0.0, 3.155]
+plotOverLine1.Source.Point2 = [45.0, 22.5, 3.155]
 plotOverLine1.Source.Resolution = 1000
 
 # Properties modified on plotOverLine1.Source
-plotOverLine1.Source.Point1 = [10.68, 12.25, 6.84499979019165]
-plotOverLine1.Source.Point2 = [20.715, 12.25, 6.84499979019165]
+plotOverLine1.Source.Point1 = [10.68, 12.25, 3.155]
+plotOverLine1.Source.Point2 = [20.715, 12.25, 3.155]
 
 # show data in view
 plotOverLine1Display = Show(plotOverLine1, renderView1)
