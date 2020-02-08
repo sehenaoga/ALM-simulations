@@ -16,8 +16,9 @@ Power_wind = 1/2*rho*A*U_in^3;
 
 %% Listing all the Runs to analyze
 %Runs = {'Run1', 'Run2', 'Run3', 'Run4'}; %Mesh dependance
-Runs = {'Run3', 'Run5', 'Run6', 'Run7', 'Run8', 'Run9', 'Run10'}; %Eps dependance
+%Runs = {'Run3', 'Run5', 'Run6', 'Run7', 'Run8', 'Run9', 'Run10'}; %Eps dependance
 %Runs = {'Run3', 'Run11', 'Run12'}; %Actuator points dependance
+Runs = {'Run14', 'Run15', 'Run16'}; %Tower Eps dependance
 Power_avg = [];
 CP_avg = [];
 
