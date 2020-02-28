@@ -9,16 +9,18 @@ fgc = 0; %Figure count
 
 %% Computing the power available in the wind
 rho = 1.225; %kg/m^3
-U_in = 10; %m/s
+U_in = [10, 15, 24]; %m/s
 D = 4.5; %m
 A = pi/4*D^2; %m^2
-Power_wind = 1/2*rho*A*U_in^3;
+Power_wind = 1/2*rho*A*U_in.^3;
 
 %% Listing all the Runs to analyze
 %Runs = {'Run1', 'Run2', 'Run3', 'Run4'}; %Mesh dependance
 %Runs = {'Run3', 'Run5', 'Run6', 'Run7', 'Run8', 'Run9', 'Run10'}; %Eps dependance
 %Runs = {'Run3', 'Run11', 'Run12'}; %Actuator points dependance
-Runs = {'Run14', 'Run15', 'Run16'}; %Tower Eps dependance
+%Runs = {'Run14', 'Run15', 'Run16'}; %Tower Eps dependance
+%Runs = {'Run14', 'Run17', 'Run18'}; %MEXICO: Multiple Inlet velocities
+Runs = {'Run19', 'Run20', 'Run21'}; %DTB: Multiple Inlet velocities
 Power_avg = [];
 CP_avg = [];
 
@@ -66,7 +68,8 @@ for k = 1:size(Runs,2)
     Power_avg(k) = sum/(n-ti_index);
 
     %% Computing CP
-    CP_avg(k) = Power_avg(k)/Power_wind;
+    CP_avg(k) = Power_avg(k)/Power_wind(k);
 
 end
+CP_avg = CP_avg';
 
