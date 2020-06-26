@@ -20,7 +20,11 @@ set(groot, 'defaultAxesTickLabelInterpreter','latex');
 set(groot, 'defaultLegendInterpreter','latex');
 
 %% Runs to analyze
-Runs = {'Run14', 'Run17', 'Run18'}; %V10, V15, V24 m/s results
+%Runs = {'Run3', 'Run5', 'Run6', 'Run7', 'Run8', 'Run9', 'Run10'}; %V10, V15, V24 m/s results
+%eps = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4];
+
+Runs = {'Run3', 'Run5', 'Run6'}; %V10, V15, V24 m/s results
+eps = [0.1, 0.15, 0.2];
 
 %% Tower location
 y_tower = 0:0.1:1.5;
@@ -29,7 +33,7 @@ x_tower = 0*y_tower;
 %% Reading experimental data
 %Axial traverses
 AT_exp_path = 'ExperimentalData/AxialTraverses/AxialTraverses.csv';
-Vars = {'V10_X','V10_Y','V15_X','V15_Y','V24_X','V24_Y'};
+Vars = {'V10_X','V10_Y'};
 AT_exp_mat = ReadCSV(AT_exp_path, Vars, false);
 j = 1;
 for i = 1:2:size(Vars,2)
@@ -49,16 +53,14 @@ hold on
 figure(AT_plot)
 bullets = {'ok', 'sk', '^k'};
 plot(AT_exp{1}(:,1), AT_exp{1}(:,2), bullets{1}, MS, def_MS); hold on
-plot(AT_exp{2}(:,1), AT_exp{2}(:,2), bullets{2}, MS, def_MS); hold on
-plot(AT_exp{3}(:,1), AT_exp{3}(:,2), bullets{3}, MS, def_MS); hold on
-
 
 %% Analyzing the axial traverses
 %Folder = '/media/Data/ALM/ALM-simulations/Simulations/MEXICO/Publication/';
 Folder = '/Users/Sebastian/Documents/ALM-simulations/Simulations/MEXICO/Publication/';
-Subfolder = '/Postprocessing/AT/';
-AT = {'AT1', 'AT2', 'AT3'};
-LS_array = {'-'; '--'; '-.'};
+Subfolder = '/Postprocessing/';
+%AT = {'AT1', 'AT2', 'AT3'};
+AT = {'AT0'};
+LS_array = {'-k'; '--k'; '-.k'; ':k'; '-b'; '--b'; '-.b'};
 for i = 1:size(Runs,2)
     %Reading the data
     for j = 1:size(AT,2)
@@ -82,21 +84,21 @@ for i = 1:size(Runs,2)
     AT_num(:,2) = AT_num(:,2)./Uref(i);
     %Plotting the velocity profile
     figure(AT_plot)
-    plot(AT_num(:,1), AT_num(:,2), LS_array{i}, LW, def_LW, C, 'k')
+    plot(AT_num(:,1), AT_num(:,2), LS_array{i}, LW, def_LW)
     hold on
     
     %Computing the MSE
-    n = size(AT_exp{i},1);
+    n = size(AT_exp{1},1);
     dx = abs(AT_num(1,1) - AT_num(2,1));
     sum = 0;
     for j = 1:n
-        index = round(((AT_exp{i}(j,1)-AT_num(1,1))/dx)+1);
+        index = round(((AT_exp{1}(j,1)-AT_num(1,1))/dx)+1);
         if index < 0
             index = 1;
         elseif index > size(AT_num,1)
             index = size(AT_num,1);
         end
-        diff = (AT_exp{i}(j,2) - AT_num(index,2))^2;
+        diff = (AT_exp{1}(j,2) - AT_num(index,2))^2;
         sum = sum + diff;
     end
     MSE(i) = 1/n*sum;
@@ -105,12 +107,10 @@ MSE = MSE';
 
 %% Labeling the AT plot
 figure(AT_plot);
-lgd = {'TSR $= 10^*$', ...
-       'TSR $= 6.7^*$', ...
-       'TSR $= 4.2^*$', ...
-       'TSR $= 10$', ...
-       'TSR $= 6.7$', ...
-       'TSR $= 4.2$'};
+lgd = {'Experimental data'};
+for i = 2:size(eps,2)+1
+    lgd{i} = strcat('$\varepsilon = ', num2str(eps(i-1)), '$');
+end
 legend(lgd, L, 'SouthWest', FS, def_FS-7) 
 xmin = -1;
 xmax = 1.32;

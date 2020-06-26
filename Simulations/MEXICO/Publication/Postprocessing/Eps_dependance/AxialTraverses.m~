@@ -20,7 +20,7 @@ set(groot, 'defaultAxesTickLabelInterpreter','latex');
 set(groot, 'defaultLegendInterpreter','latex');
 
 %% Runs to analyze
-Runs = {'Run14', 'Run17', 'Run18'}; %V10, V15, V24 m/s results
+Runs = {'Run3', 'Run5', 'Run6', 'Run7', 'Run8', 'Run9', 'Run10'}; %V10, V15, V24 m/s results
 
 %% Tower location
 y_tower = 0:0.1:1.5;
@@ -29,7 +29,7 @@ x_tower = 0*y_tower;
 %% Reading experimental data
 %Axial traverses
 AT_exp_path = 'ExperimentalData/AxialTraverses/AxialTraverses.csv';
-Vars = {'V10_X','V10_Y','V15_X','V15_Y','V24_X','V24_Y'};
+Vars = {'V10_X','V10_Y'};
 AT_exp_mat = ReadCSV(AT_exp_path, Vars, false);
 j = 1;
 for i = 1:2:size(Vars,2)
@@ -49,16 +49,14 @@ hold on
 figure(AT_plot)
 bullets = {'ok', 'sk', '^k'};
 plot(AT_exp{1}(:,1), AT_exp{1}(:,2), bullets{1}, MS, def_MS); hold on
-plot(AT_exp{2}(:,1), AT_exp{2}(:,2), bullets{2}, MS, def_MS); hold on
-plot(AT_exp{3}(:,1), AT_exp{3}(:,2), bullets{3}, MS, def_MS); hold on
-
 
 %% Analyzing the axial traverses
 %Folder = '/media/Data/ALM/ALM-simulations/Simulations/MEXICO/Publication/';
 Folder = '/Users/Sebastian/Documents/ALM-simulations/Simulations/MEXICO/Publication/';
 Subfolder = '/Postprocessing/AT/';
-AT = {'AT1', 'AT2', 'AT3'};
-LS_array = {'-'; '--'; '-.'};
+%AT = {'AT1', 'AT2', 'AT3'};
+AT = {'AT0'};
+LS_array = {'-'; '--'; '-.'; ':', ''};
 for i = 1:size(Runs,2)
     %Reading the data
     for j = 1:size(AT,2)

@@ -4,13 +4,20 @@ close all
 
 %Global variables
 FS = 'FontSize';
+def_FS = 20;
 LW = 'LineWidth';
+def_LW = 2;
 LS = 'LineStyle';
+L = 'Location';
 C = 'Color';
 MFC = 'MarkerFaceColor';
 MEC = 'MarkerEdgeColor';
 MS = 'MarkerSize';
-set(0,'defaultTextInterpreter','latex');
+def_MS = 7;
+%Latex interpreters
+set(groot,'defaulttextinterpreter','latex');
+set(groot, 'defaultAxesTickLabelInterpreter','latex');
+set(groot, 'defaultLegendInterpreter','latex');
 
 %% Runs to analyze and its reference velocities
 Runs = {'Run14', 'Run17', 'Run18'}; %V10, V15, V24 m/s results
@@ -52,26 +59,26 @@ end
 clear RT_exp_path Vels Vars RT_exp RT_PATH
 
 %% Plotting the experimental results
-bullets = {'ok', 'sk', 'dk', '+k'};
+bullets = {'ok', 'sk', '^k', '+k'};
 %Radial traverses - V10
 RT_V10_plot = figure();
 for i = 1:size(RT_exp_V10,2)
-    plot(RT_exp_V10{i}(:,1), RT_exp_V10{i}(:,2), bullets{i}, MS, 4); hold on
+    plot(RT_exp_V10{i}(:,1), RT_exp_V10{i}(:,2), bullets{i}, MS, def_MS); hold on
 end
 %Radial traverses - V15
 RT_V15_plot = figure();
 for i = 1:size(RT_exp_V15,2)
-    plot(RT_exp_V15{i}(:,1), RT_exp_V15{i}(:,2), bullets{i}, MS, 4); hold on
+    plot(RT_exp_V15{i}(:,1), RT_exp_V15{i}(:,2), bullets{i}, MS, def_MS); hold on
 end
 %Radial traverses - V24
 RT_V24_plot = figure();
 for i = 1:size(RT_exp_V24,2)
-    plot(RT_exp_V24{i}(:,1), RT_exp_V24{i}(:,2), bullets{i}, MS, 4); hold on
+    plot(RT_exp_V24{i}(:,1), RT_exp_V24{i}(:,2), bullets{i}, MS, def_MS); hold on
 end
 plots = [RT_V10_plot, RT_V15_plot, RT_V24_plot];
 
 %% Analyzing the radial traverses
-Folder = '/media/Data/ALM/ALM-simulations/Simulations/MEXICO/Publication/';
+Folder = '/Users/Sebastian/Documents/ALM-simulations/Simulations/MEXICO/Publication/';
 Subfolder = '/Postprocessing/RT/';
 RT = {'RT1-', 'RT2-', 'RT3-', 'RT4-'};
 LS_array = {'-'; '--'; '-.'; ':'};
@@ -89,17 +96,17 @@ for i = 1:size(Runs,2)
         RT_num{j}(:,1) = Data{1}(:,1);
         for k = 1:size(RT_num{j},1)
             sum = 0;
-            for m = 1:size(RT_n,2)
+            for m = 1:RT_n
                 sum = sum + Data{m}(k,2);
             end
-            RT_num{j}(k,2) = sum/size(RT_n,2);
+            RT_num{j}(k,2) = sum/RT_n;
         end
         %Normalizing the data
         RT_num{j}(:,1) = (RT_num{j}(:,1)-Rotor_0(3))./(4.5/2);
         RT_num{j}(:,2) = RT_num{j}(:,2)./Uref(i);
         %Plotting the velocity profile
         figure(plots(i))
-        plot(RT_num{j}(:,2), RT_num{j}(:,1), LS_array{j}, LW, 1.5, C, 'k')
+        plot(RT_num{j}(:,2), RT_num{j}(:,1), LS_array{j}, LW, def_LW, C, 'k')
         hold on
     end
 end
@@ -107,28 +114,24 @@ end
 %% Labeling the RT plots
 for i = 1:size(plots,2)
     figure(plots(i));
-    lgd = legend('$x/D = -0.56$', ... 
-                 '$x/D = -0.36$', ...
-                 '$x/D = 0.34$', ...
-                 '$x/D = 1.04$', ...
-                 '$x/D = -0.56$', ... 
-                 '$x/D = -0.36$', ...
-                 '$x/D = 0.34$', ...
-                 '$x/D = 1.04$');
-    set(lgd, 'Interpreter', 'latex', FS, 6)
-    if (i == 1)
-        set(lgd, 'Location', 'southwest')
-    else 
-        set(lgd, 'Location', 'northwest')
-    end
+    lgd = {'$x/D = -0.56^*$', ... 
+           '$x/D = -0.36^*$', ...
+           '$x/D = 0.34^*$', ...
+           '$x/D = 1.04^*$', ...
+           '$x/D = -0.56$', ... 
+           '$x/D = -0.36$', ...
+           '$x/D = 0.34$', ...
+           '$x/D = 1.04$'};
+    legend(lgd, FS, def_FS-7, L, 'NorthWest');
     if (i == 3)
         xmin = 0.6;
         xmax = 1.025;
+        dx_ticks = 0.1;
     else 
         xmin = 0;
         xmax = 1.025;
+        dx_ticks = 0.2;
     end
-    dx_ticks = 0.2;
     xlim([xmin,xmax])
     xticks(xmin:dx_ticks:xmax)
     ymin = 0;
@@ -139,16 +142,21 @@ for i = 1:size(plots,2)
     axis = gca;
     axis.XAxis.MinorTick = 'on';
     axis.YAxis.MinorTick = 'on';
-    xlabel('$a = U/U_{ref}$')
-    ylabel('$r/R$')
-    title_text = 'Axial induction - Radial Traverses - $t: 5-15s$ - $1.5$M cells - $\varepsilon_R = 0.2$ - $\varepsilon_T = 0.1$';
-    title(title_text, 'Interpreter', 'latex')
+    axis.FontSize = def_FS - 2;
+    xlabel('$U/U_{ref}$', FS, def_FS)
+    ylabel('$r/R$', FS, def_FS)
+    %title_text = 'Axial induction - Radial Traverses - $t: 5-15s$ - $1.5$M cells - $\varepsilon_R = 0.2$ - $\varepsilon_T = 0.1$';
+    %title(title_text, 'Interpreter', 'latex')
 end
 
 %% Saving the RT plots
+width = 8.5;
+height = 6.5;
 for i = 1:size(plots,2)
-    figure(plots(i))
-    set(gcf, 'Units', 'inches', 'Position', [5, 5, 5.6, 3.6], 'PaperSize', [5.7,3.7])
-    saveas(plots(i), strcat('RadialTraverse-', int2str(i)), 'pdf');
+%     figure(plots(i))
+%     set(gcf, 'Units', 'inches', 'Position', [5, 5, 5.6, 3.6], 'PaperSize', [5.7,3.7])
+%     saveas(plots(i), strcat('RadialTraverse-', int2str(i)), 'pdf');
+    
+    SavePlot(plots(i), strcat('RadialTraverse-', int2str(i)), 'pdf', width, height)
 end
 
