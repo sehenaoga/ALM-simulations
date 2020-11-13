@@ -1,6 +1,6 @@
 clc
 clear all
-close all
+%close all
 
 %Global variables
 FS = 'FontSize';
@@ -20,7 +20,8 @@ set(groot, 'defaultAxesTickLabelInterpreter','latex');
 set(groot, 'defaultLegendInterpreter','latex');
 
 %% Runs to analyze
-Runs = {'Run14', 'Run17', 'Run18'}; %V10, V15, V24 m/s results
+%Runs = {'Run14', 'Run17', 'Run18'}; %V10, V15, V24 m/s results
+Runs = {'Run14'}; %V10, V15, V24 m/s results
 
 %% Tower location
 y_tower = 0:0.1:1.5;
@@ -56,7 +57,7 @@ plot(AT_exp{3}(:,1), AT_exp{3}(:,2), bullets{3}, MS, def_MS); hold on
 %% Analyzing the axial traverses
 %Folder = '/media/Data/ALM/ALM-simulations/Simulations/MEXICO/Publication/';
 Folder = '/Users/Sebastian/Documents/ALM-simulations/Simulations/MEXICO/Publication/';
-Subfolder = '/Postprocessing/AT/';
+Subfolder = '/Postprocessing/AT2/';
 AT = {'AT1', 'AT2', 'AT3'};
 LS_array = {'-'; '--'; '-.'};
 for i = 1:size(Runs,2)
@@ -102,6 +103,7 @@ for i = 1:size(Runs,2)
     MSE(i) = 1/n*sum;
 end
 MSE = MSE';
+RMSE = sqrt(MSE)*100;
 
 %% Labeling the AT plot
 figure(AT_plot);

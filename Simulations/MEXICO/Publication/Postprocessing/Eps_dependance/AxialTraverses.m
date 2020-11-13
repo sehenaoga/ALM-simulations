@@ -20,11 +20,11 @@ set(groot, 'defaultAxesTickLabelInterpreter','latex');
 set(groot, 'defaultLegendInterpreter','latex');
 
 %% Runs to analyze
-%Runs = {'Run3', 'Run5', 'Run6', 'Run7', 'Run8', 'Run9', 'Run10'}; %V10, V15, V24 m/s results
-%eps = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4];
+Runs = {'Run3', 'Run5', 'Run6', 'Run7', 'Run8', 'Run10'}; %V10, V15, V24 m/s results
+eps = [1, 1.5, 2, 2.5, 3, 4];
 
-Runs = {'Run3', 'Run5', 'Run6'}; %V10, V15, V24 m/s results
-eps = [0.1, 0.15, 0.2];
+%Runs = {'Run3', 'Run5', 'Run6'}; %V10, V15, V24 m/s results
+%eps = [0.1, 0.15, 0.2];
 
 %% Tower location
 y_tower = 0:0.1:1.5;
@@ -57,10 +57,12 @@ plot(AT_exp{1}(:,1), AT_exp{1}(:,2), bullets{1}, MS, def_MS); hold on
 %% Analyzing the axial traverses
 %Folder = '/media/Data/ALM/ALM-simulations/Simulations/MEXICO/Publication/';
 Folder = '/Users/Sebastian/Documents/ALM-simulations/Simulations/MEXICO/Publication/';
-Subfolder = '/Postprocessing/';
-%AT = {'AT1', 'AT2', 'AT3'};
-AT = {'AT0'};
-LS_array = {'-k'; '--k'; '-.k'; ':k'; '-b'; '--b'; '-.b'};
+Subfolder = '/Postprocessing/AT/';
+AT = {'AT1', 'AT2', 'AT3'};
+%AT = {'AT0'};
+Colors = {'k'; 'k'; 'k'; 'b'; 'b'; 'r'};
+LS_array = {'-.'; '--'; '-'; '--'; '-'; '-.';};
+%LS_array = {'-'; '-'; '-'; '-'; '-'; '-'; '-'};
 for i = 1:size(Runs,2)
     %Reading the data
     for j = 1:size(AT,2)
@@ -84,7 +86,7 @@ for i = 1:size(Runs,2)
     AT_num(:,2) = AT_num(:,2)./Uref(i);
     %Plotting the velocity profile
     figure(AT_plot)
-    plot(AT_num(:,1), AT_num(:,2), LS_array{i}, LW, def_LW)
+    plot(AT_num(:,1), AT_num(:,2), LS_array{i}, LW, def_LW, C, Colors{i})
     hold on
     
     %Computing the MSE
@@ -104,12 +106,13 @@ for i = 1:size(Runs,2)
     MSE(i) = 1/n*sum;
 end
 MSE = MSE';
+RMSE = sqrt(MSE)*100;
 
 %% Labeling the AT plot
 figure(AT_plot);
-lgd = {'Experimental data'};
+lgd = {'Experimental data*'};
 for i = 2:size(eps,2)+1
-    lgd{i} = strcat('$\varepsilon = ', num2str(eps(i-1)), '$');
+    lgd{i} = strcat('$\varepsilon_R/c = ', num2str(eps(i-1)), '$');
 end
 legend(lgd, L, 'SouthWest', FS, def_FS-7) 
 xmin = -1;
