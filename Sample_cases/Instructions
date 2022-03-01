@@ -25,4 +25,4 @@ Note: the ampsersand character at the end of the commands above will send the ex
 - To kill a job in the foreground: ctrl+c
 - To monitor the logs that are being written by the job: tail -f <log_name>
 
-Simulation lenght and file dump frequency is controlled through parameters on the file system/controlDict
+Simulation length and file dump frequency is controlled through parameters in the file system/controlDict
