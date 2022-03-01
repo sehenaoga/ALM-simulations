@@ -18,11 +18,16 @@ pisoFoamTurbine.ALM >> pisoFoam.log 2>&1 &
 
 Note: the ampsersand character at the end of the commands above will send the excecution to the background. To monitor the status of the job you can use:
 
-- To see the jobs that are excecuting: jobs
-- To kill a job: kill 9 <job_id>
-- To bring a job to the foreground: fg <job_id>
+- To see the jobs that are excecuting: jobs -l
+- To kill a job: kill 9 <job_pid>
+- To bring a job to the foreground: fg <job_pid>
 - To send the job back to the background without killing it: ctrl+Z
 - To kill a job in the foreground: ctrl+c
 - To monitor the logs that are being written by the job: tail -f <log_name>
+- To monitor the machine resource usage: htop
 
 Simulation length and file dump frequency is controlled through parameters in the file system/controlDict
+
+The Postprocessing folder contains reference values and Python scripts for extracting the data from the flow field through paraview. 
+
+Multiple cases can be run in parallel in the same machine. They're run in serial, then each case would use a complete CPU and about 3GB of RAM with the 1.5M cells mesh.
