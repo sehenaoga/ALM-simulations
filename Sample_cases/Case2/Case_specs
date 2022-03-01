@@ -1,0 +1,13 @@
+Turbine: Dowind two-bladed downwind configuration
+TSR: 10
+Dimensional speed: 10m/s
+
+**Rotor**
+eps_rotor ratio = 2;
+Chord at r/R 0.95 = 0.1m
+Dimensional eps_rotor = 0.2
+
+**Tower**
+eps_tower ratio = 0.2
+Tower diamter= 0.5 m
+Dimensional eps_rotor = 0.1

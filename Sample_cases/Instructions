@@ -1,0 +1,28 @@
+**Running ALM simulation with SOWFA**
+
+1. Launch OpenFoam
+of240
+
+2. Navigate to the root directiory of the case you want to run
+cd <directiory_path>
+Note: This folder should contain three folders:
+- 0: Initial condition
+- constant: Wind turbine parameters
+- system: Solver parameters
+
+3. Create the mesh and write logs to blockMesh.log
+blockMesh >> blockMesh.log 2>&1 &
+
+4. Run the solver and write logs to pisoFoam.log
+pisoFoamTurbine.ALM >> pisoFoam.log 2>&1 &
+
+Note: the ampsersand character at the end of the commands above will send the excecution to the background. To monitor the status of the job you can use:
+
+- To see the jobs that are excecuting: jobs
+- To kill a job: kill 9 <job_id>
+- To bring a job to the foreground: fg <job_id>
+- To send the job back to the background without killing it: ctrl+Z
+- To kill a job in the foreground: ctrl+c
+- To monitor the logs that are being written by the job: tail -f <log_name>
+
+Simulation lenght and file dump frequency is controlled through parameters on the file system/controlDict
